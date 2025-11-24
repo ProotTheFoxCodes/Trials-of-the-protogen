@@ -11,13 +11,13 @@ misc = {
             "All cards start as 2s."
         },
         ch_c_totp_talents3 = {
-            "Whenever a {X:blue, C:white}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{} {C:red} or{} {X:red, C:white}mult{} {C:red}by 10%.{}"
+            "Whenever a {C:white, X:blue}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{} {C:red} or{} {C:white, X:red}mult{} {C:red}by 10%.{}"
         },
         ch_c_totp_talents4 = {
-            "Every 30th card triggered is considered {X:blue, C:white, T:j_totp_unwise_tooltip}Unwise{}."
-        }
+            "Every 30th card triggered is considered {C:white, X:blue, T:j_totp_unwise_tooltip}Unwise{}."
+        },
         ch_c_totp_talents5 = {
-            "Whenever a card is made {X:blue, C:white, T:j_totp_unwise_tooltip}Unwise{}, it's base chips become the total chip value of the previously declared {X:blue, C:white, T:j_totp_unwise_tooltip}Unwise{} card."
+            "Whenever a card is made {C:white, X:blue, T:j_totp_unwise_tooltip}Unwise{}, it's base chips become the total chip value of the previously declared {C:white, X:blue, T:j_totp_unwise_tooltip}Unwise{} card."
         }
     }
 },
