@@ -5,7 +5,7 @@ misc = {
     },
     v_text = {
         ch_c_totp_talents1 = {
-            "Start with an {C:attention, T:eternal}Eternal{} {X:blue, C:legendary, T:j_triboulet}Triboulet{}."
+            "Start with an {C:attention,T:eternal}Eternal{} {X:lgendary,C:blue,T:j_triboulet}Triboulet{}."
         },
         ch_c_totp_talents2 = {
             "All cards start as 2s."
@@ -20,7 +20,7 @@ misc = {
             "Whenever a card is made {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{}, it's base chips become"
         },
         ch_c_totp_talents6 = {
-            "the total chip value of the previously declared {X:blue, C:white,T:j_totp_unwise_tooltip}Unwise{} card."
+            "the total chip value of the previously declared {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{} card."
         }
     }
 },
