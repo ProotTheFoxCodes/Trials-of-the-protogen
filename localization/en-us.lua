@@ -11,7 +11,7 @@ misc = {
             "All cards start as 2s."
         },
         ch_c_totp_talents3 = {
-            "Whenever a {C:blue}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{}{C:red} or{} {X:red,C:white}mult{} {C:red}by 10%.{}"
+            "Whenever a {C:blue}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{}{C:red} or{} {X:red,C:white}mult{} {C:red}by 30%.{}"
         },
         ch_c_totp_talents4 = {
             "Every 30th card triggered is considered {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{}."
