@@ -99,7 +99,7 @@ SMODS.Challenge({
 			{ s = "D", r = "2" },
 			{ s = "D", r = "2" },
 		},
-		calculate = function(self, card, context)
+		calculate = function(self, context)
 			if context.individual and context.cardarea == G.play and not context.end_of_round then
 				ret = {}
 				G.GAME.totp_talent = G.GAME.totp_talent + 1
