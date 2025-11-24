@@ -104,6 +104,7 @@ SMODS.Challenge({
 				ret = {}
 				G.GAME.totp_talent = G.GAME.totp_talent + 1
 				local talent = G.GAME.totp_talent
+				print(talent)
 				if talent == 1 then
 					G.GAME.totp_talented_nominal = context.other_card:get_chip_bonus()
 				end
@@ -113,7 +114,7 @@ SMODS.Challenge({
 					context.other_card.nominal = G.GAME.totp_talented_nominal
 					G.GAME.totp_talented_nominal = totp_new_talented
 				end
-				table.insert(ret, { extra = {message = totp.talent .. " / 30" }})
+				ret.extra = {message = totp.talent .. " / 30" }
 				if not context.other_card.base.value == "King" and not context.other_card.base.value == "Queen" then
 					if pseudorandom("shoutouts to gay foxgirls please draw yuri of them", 0, 1) then
 						a = hand_chips * -0.1
@@ -122,10 +123,16 @@ SMODS.Challenge({
 						a = 0
 						b = 0.9
 					end
+					ret.chips = a
+					ret.xmult = b
+					ret.remove_default_message = true
+					--[[
 						table.insert(ret, "chips = a")
 						table.insert(ret, "xmult = b")
 						table.insert(ret, "remove_default_message = true")
+					]]
 				end
+				print(ret)
 				return ret
 			end
     	end
