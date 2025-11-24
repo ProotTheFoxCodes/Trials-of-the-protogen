@@ -18,7 +18,7 @@ misc = {
         },
         ch_c_totp_talents5 = {
             "Whenever a card is made {C:white, X:blue, T:j_totp_unwise_tooltip}Unwise{}, it's base chips become"
-        }
+        },
         ch_c_totp_talents6 = {
             "the total chip value of the previously declared {C:white, X:blue, T:j_totp_unwise_tooltip}Unwise{} card."
         }
