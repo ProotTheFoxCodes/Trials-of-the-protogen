@@ -8,7 +8,7 @@ misc = {
             "Start with an {C:attention,T:eternal}Eternal{} {X:legendary,C:blue,T:j_triboulet}Triboulet{}."
         },
         ch_c_totp_talents2 = {
-            "All cards start as 2s."
+            "All cards start as 7s."
         },
         ch_c_totp_talents3 = {
             "Whenever a {C:blue}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{}{C:red} or{} {X:red,C:white}mult{} {C:red}by 30%.{}"
