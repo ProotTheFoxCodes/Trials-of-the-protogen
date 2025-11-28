@@ -1,10 +1,3 @@
-SMODS.Joker { --dummy tooltip object
-	key = "unwise_tooltip",
-	no_collection = true,
-	in_pool = function(self,args)
-		return false
-	end
-}
 SMODS.Challenge({
 	key = "talents",
 	rules = {
@@ -15,6 +8,9 @@ SMODS.Challenge({
 			{ id = "totp_talents4" },
 			{ id = "totp_talents5" },
 			{ id = "totp_talents6" },
+			{ id = "totp_talents7" },
+			{ id = "totp_talents8" },
+			{ id = "totp_talents9" },
 		},
 	},
     jokers = {
@@ -106,19 +102,14 @@ SMODS.Challenge({
 	calculate = function(self, context)
 		if context.individual and context.cardarea == G.play and not context.end_of_round then
 			ret = {}
-			G.GAME.totp_talent = (G.GAME.totp_talent or 0) + 1
-			local talent = G.GAME.totp_talent
-			--print(talent)
-			if talent == 1 then
-				G.GAME.totp_talented_nominal = context.other_card:get_chip_bonus()
+			if SMODS.has_enhancement(context.other_card, "m_bonus") then
+				SMODS.modify_rank(context.other_card, 1)
+				ret.message = "Rank Up!"
+				if pseudorandom("fun fact: polar bears have black skin, it's just hidden by the white fur", 0, 3) > 2 then
+					context.other_card:set_ability("c_base")
+					ret.extra = {message = "See? You're just a fool!"}
+				end
 			end
-			if talent == 1 or talent % 30 == 0 then
-				totp_new_talented = context.other_card:get_chip_bonus()
-				context.other_card.ability.perma_bonus = 0
-				context.other_card.nominal = G.GAME.totp_talented_nominal
-				G.GAME.totp_talented_nominal = totp_new_talented
-			end
-			extra = true
 			if context.other_card:get_id() ~= "King" and context.other_card:get_id() ~= "Queen" then
 				if pseudorandom("shoutouts to gay foxgirls please draw yuri of them", 0, 1) > 0.5 then
 					a = hand_chips * -0.3
@@ -134,9 +125,6 @@ SMODS.Challenge({
 					table.insert(ret, "xmult = b")
 					table.insert(ret, "remove_default_message = true")
 				]]
-			end
-			if (extra or 0) then
-				ret.extra = {message = talent % 30 .. " / 30" }
 			end
 			--print(ret)
 			return ret

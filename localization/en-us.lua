@@ -14,24 +14,23 @@ misc = {
             "Whenever a {C:blue}non King or Queen{} triggers, {C:red}reduce either{} {C:chips}chips{}{C:red} or{} {X:red,C:white}mult{} {C:red}by 30%.{}"
         },
         ch_c_totp_talents4 = {
-            "Every 30th card triggered is considered {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{}."
+            " "
         },
         ch_c_totp_talents5 = {
-            "Whenever a card is made {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{}, it's base chips become"
+            "\"[Triboulet was] as wise at thirty as the day he was born.\""
         },
         ch_c_totp_talents6 = {
-            "the total chip value of the previously declared {X:blue,C:white,T:j_totp_unwise_tooltip}Unwise{} card."
-        }
+            "- Jean Marot, Historiographer to King Louis XII"
+        },
+        ch_c_totp_talents7 = {
+            " "
+        },
+        ch_c_totp_talents8 = {
+            "{C:blue}Bonus cards{} go up a rank when scored, and have a"
+        },
+        ch_c_totp_talents9 = {
+            "{C:green}1 in 3{} chance of losing their enhancement."
+        },
     }
 },
-descriptions = {
-    joker = {
-        j_totp_unwise_tootlip = {
-            name = "Quote from Jean Marot, Histiographer to King Louis XII",
-            text = {
-                "\"[Triboulet was] as wise at thirty as the day he was born.\""
-            }
-        }
-    }
-}
 }
