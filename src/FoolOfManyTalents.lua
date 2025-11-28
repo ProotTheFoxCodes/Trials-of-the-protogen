@@ -121,7 +121,7 @@ SMODS.Challenge({
 			end
 			extra = true
 			if context.other_card:get_id() ~= "King" and context.other_card:get_id() ~= "Queen" then
-				if pseudorandom("shoutouts to gay foxgirls please draw yuri of them", 1, 2) - 1 then
+				if pseudorandom("shoutouts to gay foxgirls please draw yuri of them", 0, 1) then
 					a = hand_chips * -0.3
 					b = 0
 				else
