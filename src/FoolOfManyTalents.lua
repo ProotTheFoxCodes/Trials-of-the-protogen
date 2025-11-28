@@ -33,7 +33,6 @@ SMODS.Challenge({
 			{ id = "c_familiar"},
             { id = "j_certificate" },
             { id = "j_marble" },
-			{ id = "j_wee" },
 			{ id = "j_mail" },
             { id = 'p_standard_normal_1', ids = {
                 'p_standard_normal_1', 'p_standard_normal_2',
