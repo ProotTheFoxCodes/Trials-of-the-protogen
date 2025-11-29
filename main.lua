@@ -8,5 +8,5 @@ local order = {
     "NotQuiteNepo",
 }
 for _, key in ipairs(order) do
-    SMODS.load_file('src/'..key..'.lua')()
+    assert(SMODS.load_file('src/'..key..'.lua'))()
 end
