@@ -42,7 +42,7 @@ misc = {
             "Every dollar of debt reduces your starting score"
         },
         ch_c_totp_nepo4 = {
-            "for the round by {C:red}5%{} of blind requirements."
+            "for the round by {C:red}2.5%{} of blind requirements."
         },
         ch_c_totp_nepo5 = {
             "Rerolls per shop limited to 5."

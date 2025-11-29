@@ -41,7 +41,7 @@ SMODS.Challenge({
 
 	calculate = function(self, context)
 		if context.setting_blind then
-			G.GAME.chips = G.GAME.dollars * (G.GAME.blind.chips * 0.05)
+			G.GAME.chips = G.GAME.dollars * (G.GAME.blind.chips * 0.025)
 		end
 	end
 })
