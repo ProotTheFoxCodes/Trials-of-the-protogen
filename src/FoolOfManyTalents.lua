@@ -43,7 +43,6 @@ SMODS.Challenge({
 		}
 	},
 	deck = {
-		type = "challenge_deck",
 		cards = {
 			{ s = "S", r = "7" },
 			{ s = "S", r = "7" },

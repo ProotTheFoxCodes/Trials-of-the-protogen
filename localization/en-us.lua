@@ -2,6 +2,7 @@ return {
 misc = {
     challenge_names = {
         c_totp_talents = "Fool of Many Talents",
+        c_totp_nepo = "Nepotism?"
     },
     v_text = {
         ch_c_totp_talents1 = {
@@ -30,6 +31,21 @@ misc = {
         },
         ch_c_totp_talents9 = {
             "{C:green}1 in 3{} chance of losing their enhancement."
+        },
+        ch_c_totp_nepo1 = {
+            "You may go up to {C:red}-$naneinf{} in debt."
+        },
+        ch_c_totp_nepo2 = {
+            "All money gain is set to {X:attention,C:white}$0{}."
+        },
+        ch_c_totp_nepo3 = {
+            "Every dollar of debt reduces your starting score"
+        },
+        ch_c_totp_nepo4 = {
+            "for the round by {C:red}5%{} of blind requirements."
+        },
+        ch_c_totp_nepo5 = {
+            "Rerolls per shop limited to 5."
         },
     }
 },
