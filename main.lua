@@ -3,7 +3,7 @@ Code "inspired" (taken and then modified to fit my needs)
 from ortlab, which was made by eremel
 ]]
 local order = {
-    "ModCalc",
+    "ModGlobal",
     "FoolOfManyTalents",
     "NotQuiteNepo",
 }
