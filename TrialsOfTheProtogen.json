@@ -2,11 +2,11 @@
 	"id": "TrialsOfTheProtogen",
 	"name": "Trials of The Protogen",
 	"display_name": "TOTP",
-	"author": ["Proto (It/They)"],
+	"author": ["ProdByProto (It/They)"],
 	"description": "Challenges and Achievements designed for the vanilla game",
 	"prefix": "totp",
 	"main_file": "main.lua",
 	"priority": -1e2,
-	"version": "0.0.5",
+	"version": "0.0.7",
 	"dependencies": []
 }

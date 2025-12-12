@@ -2,7 +2,8 @@ return {
 misc = {
     challenge_names = {
         c_totp_talents = "Fool of Many Talents",
-        c_totp_nepo = "Nepotism?"
+        c_totp_nepo = "Nepotism?",
+        c_totp_flawless4oak = "Flawless Four Of A Kind"
     },
     v_text = {
         ch_c_totp_talents1 = {
@@ -47,6 +48,24 @@ misc = {
         ch_c_totp_nepo5 = {
             "Rerolls per shop limited to 5."
         },
+        ch_c_totp_4oak1 = {
+            "{C:red}Warning: this is a sh**post{}"
+        },
+        ch_c_totp_4oak2 = {
+            "Play a {C:attention}Flawless Four Of A Kind{} to win."
+        },
+        ch_c_totp_4oak3 = {
+            "{C:inactive}A Flawless Four Of A Kind is a Four Of A Kind made up of Aces{}"
+        },
+        ch_c_totp_4oak4 = {
+            "{C:red}Beating the Ante 8 Boss Blind no longer counts.{}"
+        },
+        ch_c_totp_4oak5 = {
+            "{C:dark_edition}\"Winning in balatro is simple, all we have to do {}"
+        },
+        ch_c_totp_4oak6 = {
+            "{C:dark_edition}is play a Flawless Four Of A Kind and-\"{}"
+        }
     }
 },
 }

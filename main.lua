@@ -6,6 +6,7 @@ local order = {
     "ModGlobal",
     "FoolOfManyTalents",
     "NotQuiteNepo",
+    "Flawless4oak",
 }
 for _, key in ipairs(order) do
     assert(SMODS.load_file('src/'..key..'.lua'))()
