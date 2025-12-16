@@ -36,11 +36,11 @@ SMODS.Challenge({
     ]]
 
 	calculate = function(self, context)
-		if context.main_scoring and context.cardarea == G.play then
-			aces = 0
+		if context.before then
+			local aces = 0
 			if #G.play.cards >= 4 then
 				for i=1, #G.play.cards do
-					if G.play.cards[i]:get_() == 14 then
+					if G.play.cards[i]:get_id() == 14 then
 						aces = aces + 1
 					end
 				end
