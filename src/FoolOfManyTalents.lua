@@ -11,6 +11,7 @@ SMODS.Challenge({
 			{ id = "totp_talents7" },
 			{ id = "totp_talents8" },
 			{ id = "totp_talents9" },
+			{ id = "totp_talents10" },
 		},
 	},
     jokers = {

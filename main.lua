@@ -4,6 +4,7 @@ from ortlab, which was made by eremel
 ]]
 local order = {
     "ModGlobal",
+    "ahf2",
     "FoolOfManyTalents",
     "NotQuiteNepo",
     "Flawless4oak",
