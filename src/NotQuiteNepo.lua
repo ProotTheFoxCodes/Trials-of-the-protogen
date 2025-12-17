@@ -31,14 +31,10 @@ SMODS.Challenge({
 			--{ id = " },
 		}
 	},
+	-]]
 	deck = {
-		cards = {
-			{ s = "S", r = "7" },
-
-		}
+		type = "Challenge Deck",
 	},
-    ]]
-
 	calculate = function(self, context)
 		if context.setting_blind then
 			G.GAME.chips = G.GAME.dollars * (G.GAME.blind.chips * 0.025)

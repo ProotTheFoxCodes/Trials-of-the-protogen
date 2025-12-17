@@ -39,13 +39,11 @@ SMODS.Challenge({
 			--{ id = " },
 		}
 	},
+	]]
 	deck = {
-		cards = {
-			{ s = "S", r = "7" },
-
-		}
+		type = "Challenge Deck",
 	},
-    ]]
+
 
 	calculate = function(self, context)
 		ret = {}

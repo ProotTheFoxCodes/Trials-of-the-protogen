@@ -39,7 +39,7 @@ misc = {
             "when a face card is destroyed."
         },
         ch_c_totp_ahf210 = {
-            "{C:red,s:0.8,E:2}\"La comedia e finita!!\"{} {C:inactive,s:0.8}\"The comedy is finished!!\""
+            "{C:red,s:0.8,E:2}\"La commedia é finita!!\"{} {C:inactive,s:0.8}\"The comedy is finished!!\""
         },
         ch_c_totp_talents1 = {
             "Start with an {C:attention,T:eternal}Eternal{} {X:legendary,C:blue,T:j_triboulet}Triboulet{}."
