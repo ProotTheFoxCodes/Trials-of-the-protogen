@@ -14,6 +14,7 @@ SMODS.Challenge({
 			{ id = "totp_nepo2" },
 			{ id = "totp_nepo3" },
 			{ id = "totp_nepo4" },
+			{ id = "totp_nepo5" },
 		},
 		modifiers = {
             { id = 'dollars',  value = 0 },
@@ -35,6 +36,9 @@ SMODS.Challenge({
 	deck = {
 		type = "Challenge Deck",
 	},
+	apply = function(self)
+		G.GAME.bankrupt_at = -1.7e308
+	end,
 	calculate = function(self, context)
 		if context.setting_blind then
 			G.GAME.chips = G.GAME.dollars * (G.GAME.blind.chips * 0.025)

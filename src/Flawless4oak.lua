@@ -32,6 +32,10 @@ SMODS.Challenge({
 		type = "Challenge Deck",
 	},
 
+	apply = function(self)
+		G.GAME.win_ante = 1.8e308
+	end,
+
 	calculate = function(self, context)
 		if context.before then
 			local aces = 0
