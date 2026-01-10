@@ -59,7 +59,7 @@ SMODS.Challenge({
 					SMODS.destroy_cards(comedy_card)
 				end
 			end
-			ret.message = localize("comedy")
+			ret.message = localize("totp_comedy")
 			return ret
 		end
 	end

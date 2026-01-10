@@ -1,11 +1,14 @@
 return {
 misc = {
     dictionary = {
-        comedy = "The comedy is finished!!"
+        totp_fool = "See? You are just a fool!",
+        totp_comedy = "The comedy is finished!!",
+        totp_banned = " was banned",
     },
     challenge_names = {
         c_totp_talents = "Fool of Many Talents",
         c_totp_ahf2 = "Actors Have Feelings Too",
+        c_totp_wine_warden = "Warden of Wine",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
         
@@ -71,6 +74,18 @@ misc = {
         ch_c_totp_talents10 = {
             "{C:green}1 in 3{} chance of losing their enhancement."
         },
+        ch_c_totp_wine1 = {
+            "Start with an {C:attention}Eternal{} {X:legendary,C:green}Perkeo{}."
+        },
+        ch_c_totp_wine2 = {
+            ""
+        },
+        ch_c_totp_wine3 = {
+            "From Ante 3 onwards, a random {C:attention}Consumable{} that's not in your possesion"
+        },
+        ch_c_totp_wine4 = {
+            "gets {C:red}banned for the rest of the run{}."
+        },
         ch_c_totp_nepo1 = {
             "You may go up to {C:red}-$naneinf{} in debt."
         },
@@ -103,7 +118,7 @@ misc = {
         },
         ch_c_totp_4oak6 = {
             "{C:dark_edition}is play a Flawless Four Of A Kind and-\"{}"
-        }
+        },
     }
 },
 }

@@ -108,7 +108,7 @@ SMODS.Challenge({
 				ret.message = "Rank Up!"
 				if pseudorandom("fun fact: polar bears have black skin, it's just hidden by the white fur", 0, 3) > 2 then
 					context.other_card:set_ability("c_base")
-					ret.extra = {message = "See? You're just a fool!"}
+					ret.extra = {message = localize("totp_fool")}
 				end
 			end
 			if context.other_card:get_id() ~= "King" and context.other_card:get_id() ~= "Queen" then
