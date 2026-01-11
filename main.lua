@@ -7,6 +7,7 @@ local order = {
     "ModGlobal",
     "ahf2",
     "FoolOfManyTalents",
+    "jest",
     "WardenOfWine",
     "NotQuiteNepo",
     "Flawless4oak",

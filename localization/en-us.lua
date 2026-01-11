@@ -8,6 +8,7 @@ misc = {
     challenge_names = {
         c_totp_talents = "Fool of Many Talents",
         c_totp_ahf2 = "Actors Have Feelings Too",
+        c_totp_jest = "A Fellow of Infinite Jest",
         c_totp_wine_warden = "Warden of Wine",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
@@ -74,6 +75,18 @@ misc = {
         ch_c_totp_talents10 = {
             "{C:green}1 in 3{} chance of losing their enhancement."
         },
+        ch_c_totp_jest1 = {
+            "Start with an {C:attention}Eternal{} {X:legendary,C:attention}Yorick{}."
+        },
+        ch_c_totp_jest2 = {
+            "If {X:legendary,C:attention}Yorick{} is at {X:red,C:white}X20{} Mult by the {C:attention}Ante 8 Boss blind{}, {C:green}you win...{}"
+        },
+        ch_c_totp_jest3 = {
+            "If you don't get the required scaling in time, {C:red}you lose{}."
+        },
+        ch_c_totp_jest4 = {
+            "Start with an extra {X:attention,C:white}$10{} and a {C:attention}Double Tag{}."
+        },
         ch_c_totp_wine1 = {
             "Start with an {C:attention}Eternal{} {X:legendary,C:green}Perkeo{}."
         },
@@ -81,10 +94,10 @@ misc = {
             ""
         },
         ch_c_totp_wine3 = {
-            "From Ante 3 onwards, a random {C:attention}Consumable{} that's not in your possesion"
+            "From Ante 3 onwards, a random {C:attention}Consumable{} that's not"
         },
         ch_c_totp_wine4 = {
-            "gets {C:red}banned for the rest of the run{}."
+            "in your possesion gets {C:red}banned for the rest of the run{}."
         },
         ch_c_totp_nepo1 = {
             "You may go up to {C:red}-$naneinf{} in debt."
