@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+# Inject one or more lines of code before, after, or at (replacing) a line which matches
+# the provided pattern.
+#
+# USEFUL: For when you need to add / modify a small amount of code to setup initialization
+# routines, etc.
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+position = "at"
+pattern = "{n=G.UIT.T, config={ref_table = G.GAME, ref_value='win_ante', scale = scale, colour = G.C.WHITE, shadow = true}}"
+payload = '''
+{n=G.UIT.T, config={ref_table = G.GAME, ref_value='win_ante', scale = scale, colour = G.C.WHITE, shadow = true,id = "ante_UI_win"}}
+'''
+match_indent = true
+times = 1

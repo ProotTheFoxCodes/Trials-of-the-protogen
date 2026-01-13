@@ -9,6 +9,7 @@ misc = {
         c_totp_talents = "Fool of Many Talents",
         c_totp_ahf2 = "Actors Have Feelings Too",
         c_totp_jest = "A Fellow of Infinite Jest",
+        c_totp_chicot = "Chicot if he locked in",
         c_totp_wine_warden = "Warden of Wine",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
@@ -83,6 +84,15 @@ misc = {
         },
         ch_c_totp_jest3 = {
             "If you don't get the required scaling in time, {C:red}you lose{}."
+        },
+        ch_c_totp_chicot1 = {
+            "Start with an {C:attention}Eternal{} {X:legendary,C:red}Chicot{}."
+        },
+        ch_c_totp_chicot2 = {
+            "For this challenge, he also {C:attention}reverses the effects of balatro{}."
+        },
+        ch_c_totp_chicot3 = {
+            "{s:0.8,C:inactive}let's face facts, chicot lends himself to shitpost challenges pretty well :3{}"
         },
         ch_c_totp_jest4 = {
             "Start with an extra {X:attention,C:white}$10{} and a {C:attention}Double Tag{}."

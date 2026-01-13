@@ -8,10 +8,14 @@ local order = {
     "ahf2",
     "FoolOfManyTalents",
     "jest",
+    "chicot",
     "WardenOfWine",
+    "premonitions",
     "NotQuiteNepo",
     "Flawless4oak",
 }
 for _, key in ipairs(order) do
     assert(SMODS.load_file('src/'..key..'.lua'))()
 end
+
+UI_update_allowed = false
