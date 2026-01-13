@@ -109,6 +109,18 @@ misc = {
         ch_c_totp_wine4 = {
             "in your possesion gets {C:red}banned for the rest of the run{}."
         },
+        ch_c_totp_ss1 = {
+            "Start the run with an {C:attention}Eternal Sixth Sense{}."
+        },
+        ch_c_totp_ss2 = {
+            "Start with a deck of 6s."
+        },
+        ch_c_totp_ss3 = {
+            "{C:attention}Hand selection limit{} is set to {C:red}1{}."
+        },
+        ch_c_totp_ss4 = {
+            "{s:0.8,C:inactive}[You can only play 1 card, but you can still discard as usual.]{}"
+        },
         ch_c_totp_nepo1 = {
             "You may go up to {C:red}-$naneinf{} in debt."
         },

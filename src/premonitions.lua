@@ -24,6 +24,8 @@ SMODS.Challenge({
 	restrictions = {
 		banned_cards = {
 	        { id = "c_strength" },
+			{ id = "c_strength" },	
+			{ id = "c_tower" },	
 			{ id = "c_familiar" },
 			{ id = "c_grim" },
 			{ id = "c_incantation" },
