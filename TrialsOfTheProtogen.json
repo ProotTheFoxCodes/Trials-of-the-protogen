@@ -7,6 +7,6 @@
 	"prefix": "totp",
 	"main_file": "main.lua",
 	"priority": -1e2,
-	"version": "0.1.21",
+	"version": "0.1.21a",
 	"dependencies": []
 }

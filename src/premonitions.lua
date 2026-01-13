@@ -112,6 +112,7 @@ SMODS.Challenge({
 	},
     apply = function(self)
         G.GAME.starting_params.play_limit = 1
+		SMODS.update_hand_limit_text(true)
         return true
     end,
 	calculate = function(self, context)
