@@ -11,7 +11,7 @@ misc = {
         c_totp_jest = "A Fellow of Infinite Jest",
         c_totp_chicot = "Chicot if he locked in",
         c_totp_wine_warden = "Warden of Wine",
-        c_totp_ss = "Dangerous Premonitions"
+        c_totp_ss = "Dangerous Premonitions",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
         
