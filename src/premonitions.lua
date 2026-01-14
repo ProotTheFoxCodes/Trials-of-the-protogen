@@ -50,7 +50,7 @@ SMODS.Challenge({
 			{ id = "tag_standard" },
 		},
 		banned_other = {
-			--{ id = "bl_", type = "blind" }
+			{ id = "bl_psychic", type = "blind" }
 		}
 	},
 	deck = {
