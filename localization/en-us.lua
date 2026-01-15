@@ -48,7 +48,7 @@ misc = {
             "{C:red,s:0.8,E:2}\"La commedia é finita!!\"{} {C:inactive,s:0.8}\"The comedy is finished!!\""
         },
         ch_c_totp_talents1 = {
-            "Start with an {C:attention,T:eternal}Eternal{} {X:legendary,C:blue,T:j_triboulet}Triboulet{}."
+            "Start with an {C:attention}Eternal{} {X:legendary,C:blue}Triboulet{}."
         },
         ch_c_totp_talents2 = {
             "All cards start as 7s."
@@ -72,7 +72,7 @@ misc = {
             " "
         },
         ch_c_totp_talents9 = {
-            "{C:blue}Bonus cards{} go up a rank when scored, and have a"
+            "{C:blue,T:m_bonus}Bonus cards{} go up a rank when scored, and have a"
         },
         ch_c_totp_talents10 = {
             "{C:green}1 in 3{} chance of losing their enhancement."
@@ -93,10 +93,13 @@ misc = {
             "For this challenge, he also {C:attention}reverses the effects of balatro{}."
         },
         ch_c_totp_chicot3 = {
-            "{s:0.8,C:inactive}let's face facts, chicot lends himself to shitpost challenges pretty well :3{}"
+            "{s:0.8,C:inactive}let's face facts, chicot lends himself to sh**post challenges pretty well :3c{}"
+        },
+        ch_c_totp_chicot4 = {
+            "You're not meant to see this challenge. here's some {C:attention,T:j_joker}Test localization{}, and {C:attention,T:Other.eternal}some more{}"
         },
         ch_c_totp_jest4 = {
-            "Start with an extra {X:attention,C:white}$10{} and a {C:attention}Double Tag{}."
+            "Start with an extra {X:attention,C:white}$10{} and a {C:attention,T:tag_double}Double Tag{}."
         },
         ch_c_totp_wine1 = {
             "Start with an {C:attention}Eternal{} {X:legendary,C:green}Perkeo{}."

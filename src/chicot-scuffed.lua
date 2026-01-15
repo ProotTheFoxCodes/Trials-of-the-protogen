@@ -7,7 +7,7 @@ SMODS.Challenge({
 			{ id = "totp_chicot1" },
 			{ id = "totp_chicot2" },
 			{ id = "totp_chicot3" },
-			
+			{ id = "totp_chicot4" },
         },
 		modifiers = {
             --{ id = 'dollars',  value = -4 },
