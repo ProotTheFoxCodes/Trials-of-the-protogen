@@ -1,6 +1,22 @@
 SMODS.current_mod.calculate = function(self, context)
     if context.setting_blind then
         G.GAME.totp_round_rerolls = 0
+        if not G.GAME.totp_discarded then G.GAME.totp_discarded = {} end
+        G.GAME.totp_discarded["round"] = false
+    end
+
+    if context.pre_discard then
+        local discard = G.GAME.totp_discarded
+        discard["round"], discard["run"] = true, true
+    end
+
+    if context.before and next(context.poker_hands['Flush Five']) and not G.GAME.selected_back.effect.config.randomize_rank_suit then
+        if not G.GAME.totp_discarded["round"] then
+            check_for_unlock({type = "pow5"})
+        end
+        if not G.GAME.totp_discarded["run"] then
+            check_for_unlock({type = "oblivion"})
+        end
     end
 end
 

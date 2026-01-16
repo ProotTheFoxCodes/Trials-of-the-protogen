@@ -1,5 +1,14 @@
 return {
 misc = {
+    achievement_names = {
+        ach_totp_pow5 = "The Power of Five",
+        ach_totp_oblivion = "Oblivion",
+
+    },
+    achievement_descriptions = {
+        ach_totp_pow5 = "Play a Flush Five without having discarded in the same round. (Excludes Erratic Deck)",
+        ach_totp_oblivion = "Play a Flush Five without having discarded in the same run. (Excludes Erratic Deck)",
+    },
     dictionary = {
         totp_fool = "See? You are just a fool!",
         totp_comedy = "The comedy is finished!!",
