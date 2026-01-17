@@ -3,11 +3,16 @@ misc = {
     achievement_names = {
         ach_totp_pow5 = "The Power of Five",
         ach_totp_oblivion = "Oblivion",
-
+        ach_totp_artist = "Artistic Struggle",
+        ach_totp_collector1 = "Card Collector",
+        ach_totp_collector2 = "Card Sommelier",
     },
     achievement_descriptions = {
-        ach_totp_pow5 = "Play a Flush Five without having discarded in the same round. (Excludes Erratic Deck)",
-        ach_totp_oblivion = "Play a Flush Five without having discarded in the same run. (Excludes Erratic Deck)",
+        ach_totp_pow5 = "Play a Flush Five without having discarded in the same round. (Excludes Erratic Deck and challenges)",
+        ach_totp_oblivion = "Play a Flush Five without having discarded in the same run. (Excludes Erratic Deck and challenges)",
+        ach_totp_artist = "Lose to having no hand size (i.e., you can't draw hands)",
+        ach_totp_collector1 = "Get Business Card and Trading Card in the same build.",
+        ach_totp_collector2 = "Get any 4 of the following in the same build: Baseball Card, Trading Card, Loyalty Card, Business Card, Credit Card, Driver\'s License, Golden Ticket, Joker."
     },
     dictionary = {
         totp_fool = "See? You are just a fool!",

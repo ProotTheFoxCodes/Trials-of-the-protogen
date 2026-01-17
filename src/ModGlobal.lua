@@ -10,14 +10,43 @@ SMODS.current_mod.calculate = function(self, context)
         discard["round"], discard["run"] = true, true
     end
 
-    if context.before and next(context.poker_hands['Flush Five']) and not G.GAME.selected_back.effect.config.randomize_rank_suit then
+    if context.before and next(context.poker_hands['Flush Five']) and not G.GAME.selected_back.effect.config.randomize_rank_suit and not G.GAME.challenge then
         if not G.GAME.totp_discarded["round"] then
-            check_for_unlock({type = "pow5"})
+            check_for_unlock({type == "pow5"})
         end
         if not G.GAME.totp_discarded["run"] then
-            check_for_unlock({type = "oblivion"})
+            check_for_unlock({type == "oblivion"})
         end
     end
+
+    if context.card_added then
+        local card_jokers = {
+            "j_joker",
+            "j_baseball",
+            "j_trading",
+            "j_loyalty_card",
+            "j_ticket",
+            "j_business",
+            "j_credit_card",
+            "j_drivers_license",
+        }
+        G.GAME.totp_has_cj = {}
+        local cj_amt = 0
+        for _, key in pairs(card_jokers) do
+            G.GAME.totp_has_cj[key] = not not next(SMODS.find_card(key))
+        end
+        for key in pairs(G.GAME.totp_has_cj) do
+            if G.GAME.totp_has_cj[key] then  cj_amt = cj_amt + 1 end
+        end
+        if G.GAME.totp_has_cj["j_baseball"] and G.GAME.totp_has_cj["j_trading"] then
+            check_for_unlock({type == "collector1"})
+        end
+        if cj_amt >= 4 then
+            check_for_unlock({type == "collector2"})
+        end
+    end
+
+    --TODO 0 HAND SIZE ACHIEVEMENT, PATCH FOR IT IN GAME.LUA:3175
 end
 
 function SMODS.current_mod.reset_game_globals(from_game_start)

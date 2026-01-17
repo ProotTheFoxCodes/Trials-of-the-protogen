@@ -16,3 +16,15 @@ payload = '''
 '''
 match_indent = true
 times = 1
+
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+position = "after"
+pattern = "if #G.hand.cards < 1 and #G.deck.cards < 1 and #G.play.cards < 1 then"
+payload = '''
+    check_for_unlock{type = "artist"}
+'''
+match_indent = true
+times = 1
