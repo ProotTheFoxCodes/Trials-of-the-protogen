@@ -1,8 +1,15 @@
 SMODS.current_mod.calculate = function(self, context)
+    if G.GAME.totp_oml == nil then G.GAME.totp_oml = true end
     if context.setting_blind then
+        if G.GAME.blind.config.blind.key == "bl_final_leaf" then
+            G.GAME.totp_leafsell = false
+        end
         G.GAME.totp_round_rerolls = 0
         if not G.GAME.totp_discarded then G.GAME.totp_discarded = {} end
         G.GAME.totp_discarded["round"] = false
+        if G.GAME.round_resets.ante >= 6 then
+            G.GAME.totp_oml = false
+        end
     end
 
     if context.pre_discard then
@@ -12,10 +19,10 @@ SMODS.current_mod.calculate = function(self, context)
 
     if context.before and next(context.poker_hands['Flush Five']) and not G.GAME.selected_back.effect.config.randomize_rank_suit and not G.GAME.challenge then
         if not G.GAME.totp_discarded["round"] then
-            check_for_unlock({type == "pow5"})
+            check_for_unlock({type = "pow5"})
         end
         if not G.GAME.totp_discarded["run"] then
-            check_for_unlock({type == "oblivion"})
+            check_for_unlock({type = "oblivion"})
         end
     end
 
@@ -39,14 +46,16 @@ SMODS.current_mod.calculate = function(self, context)
             if G.GAME.totp_has_cj[key] then  cj_amt = cj_amt + 1 end
         end
         if G.GAME.totp_has_cj["j_baseball"] and G.GAME.totp_has_cj["j_trading"] then
-            check_for_unlock({type == "collector1"})
+            check_for_unlock({type = "collector1"})
         end
         if cj_amt >= 4 then
-            check_for_unlock({type == "collector2"})
+            check_for_unlock({type = "collector2"})
         end
     end
 
-    --TODO 0 HAND SIZE ACHIEVEMENT, PATCH FOR IT IN GAME.LUA:3175
+    if context.selling_card and G.P_CENTERS[context.card].set == "Joker" and G.GAME.blind.config.blind.key == "bl_final_leaf" then
+        G.GAME.totp_leafsell = true
+    end
 end
 
 function SMODS.current_mod.reset_game_globals(from_game_start)
