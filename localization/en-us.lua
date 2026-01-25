@@ -11,6 +11,7 @@ misc = {
         ach_totp_level = "Get on my level",
         ach_totp_abscission = "Autumnal Abscission",
         ach_totp_rich = "High Roller",
+        ach_totp_nostalgic = "Reminiscence",
     },
     achievement_descriptions = {
         ach_totp_pow5 = "Play a Flush Five without having discarded in the same round. (Excludes Erratic Deck)",
@@ -23,6 +24,7 @@ misc = {
         ach_totp_level = "Reach level 10 on any poker hand before selecting a blind in Ante 6 or above.",
         ach_totp_abscission = "Defeat Verdant Leaf in Ante 8 without selling any jokers.",
         ach_totp_rich = "Have a Balance of at least $1000.",
+        ach_totp_nostalgic = "Win a run without selecting any Small or Big Blinds.",
     },
     dictionary = {
         totp_fool = "See? You are just a fool!",

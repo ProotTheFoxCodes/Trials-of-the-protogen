@@ -135,3 +135,15 @@ SMODS.Achievement {
     end,
 }
 
+SMODS.Achievement {
+    key = "nostalgic",
+    bypass_all_unlocked = true,
+    hidden_name = false,
+    hidden_text = false,
+    unlock_condition = function(self,args)
+        if G.GAME and G.GAME.won and G.GAME.totp_nostalgic then
+            return true
+        end
+    end,
+}
+

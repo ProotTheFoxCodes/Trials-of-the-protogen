@@ -1,8 +1,12 @@
 SMODS.current_mod.calculate = function(self, context)
     if G.GAME.totp_oml == nil then G.GAME.totp_oml = true end
+    if G.GAME.totp_nostalgic == nil then G.GAME.totp_nostalgic = true end
     if context.setting_blind then
         if G.GAME.blind.config.blind.key == "bl_final_leaf" then
             G.GAME.totp_leafsell = false
+        end
+        if not G.GAME.blind.boss then
+            G.GAME.totp_nostalgic = false
         end
         G.GAME.totp_round_rerolls = 0
         if not G.GAME.totp_discarded then G.GAME.totp_discarded = {} end
