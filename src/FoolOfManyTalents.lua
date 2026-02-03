@@ -104,6 +104,7 @@ SMODS.Challenge({
 		if context.individual and context.cardarea == G.play and not context.end_of_round then
 			ret = {}
 			if SMODS.has_enhancement(context.other_card, "m_bonus") then
+---@diagnostic disable-next-line: discard-returns
 				SMODS.modify_rank(context.other_card, 1)
 				ret.message = "Rank Up!"
 				if pseudorandom("fun fact: polar bears have black skin, it's just hidden by the white fur", 0, 3) > 2 then

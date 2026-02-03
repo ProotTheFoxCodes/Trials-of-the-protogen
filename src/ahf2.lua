@@ -84,6 +84,7 @@ function G.FUNCS.play_cards_from_highlighted(e,from_canio)
 		play_old()
 	else
 		if SMODS.pseudorandom_probability(nil, "canio play", 1, 4) then
+---@diagnostic disable-next-line: redundant-parameter
 			G.FUNCS.discard_cards_from_highlighted(nil,nil,true)
 		else
 			play_old()

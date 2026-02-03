@@ -71,6 +71,7 @@ SMODS.Challenge({
         end
 
         if context.ante_change then
+---@diagnostic disable-next-line: redundant-parameter
             G.GAME.starting_params.ante_scaling = math.max(Lerp(0.006,166,0.125*G.GAME.round_resets.ante-0.125,0.006))
         end
 	end

@@ -57,7 +57,7 @@ SMODS.current_mod.calculate = function(self, context)
         end
     end
 
-    if context.selling_card and G.P_CENTERS[context.card].set == "Joker" and G.GAME.blind.config.blind.key == "bl_final_leaf" then
+    if context.selling_card and context.card.config.set == "Joker" and G.GAME.blind.config.blind.key == "bl_final_leaf" then
         G.GAME.totp_leafsell = true
     end
 end
