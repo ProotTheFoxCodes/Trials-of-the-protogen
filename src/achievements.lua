@@ -147,3 +147,15 @@ SMODS.Achievement {
     end,
 }
 
+SMODS.Achievement {
+    key = "blackjack",
+    bypass_all_unlocked = true,
+    hidden_name = true,
+    hidden_text = false,
+    unlock_condition = function(self,args)
+        if G.GAME and G.GAME.won and G.GAME.totp_blackjack then
+            return true
+        end
+    end,
+}
+

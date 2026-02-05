@@ -1,6 +1,13 @@
+start_old = Game.start_run
+function Game.start_run(args)
+    local ret = start_old(args)
+    G.GAME.totp_oml = true
+    G.GAME.totp_blackjack = true
+    G.GAME.totp_nostalgic = true
+    return ret
+end
+
 SMODS.current_mod.calculate = function(self, context)
-    if G.GAME.totp_oml == nil then G.GAME.totp_oml = true end
-    if G.GAME.totp_nostalgic == nil then G.GAME.totp_nostalgic = true end
     if context.setting_blind then
         if G.GAME.blind.config.blind.key == "bl_final_leaf" then
             G.GAME.totp_leafsell = false
@@ -29,6 +36,14 @@ SMODS.current_mod.calculate = function(self, context)
             check_for_unlock({type = "oblivion"})
         end
     end
+
+    if context.before then
+        local total = 0
+        for _, icard in pairs(G.play.cards) do
+            total = total + icard:get_id()
+        end
+        if total > 21 then G.GAME.totp_blackjack = false end
+	end
 
     if context.card_added then
         local card_jokers = {

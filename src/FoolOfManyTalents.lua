@@ -106,7 +106,7 @@ SMODS.Challenge({
 			if SMODS.has_enhancement(context.other_card, "m_bonus") then
 ---@diagnostic disable-next-line: discard-returns
 				SMODS.modify_rank(context.other_card, 1)
-				ret.message = "Rank Up!"
+				ret.message = localize("totp_rank_up")
 				if pseudorandom("fun fact: polar bears have black skin, it's just hidden by the white fur", 0, 3) > 2 then
 					context.other_card:set_ability("c_base")
 					ret.extra = {message = localize("totp_fool")}

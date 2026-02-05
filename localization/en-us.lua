@@ -12,6 +12,7 @@ misc = {
         ach_totp_abscission = "Autumnal Abscission",
         ach_totp_rich = "High Roller",
         ach_totp_nostalgic = "Reminiscence",
+        ach_totp_blackjack = "Joker... Blackjack?!?",
     },
     achievement_descriptions = {
         ach_totp_pow5 = "Play a Flush Five without having discarded in the same round. (Excludes Erratic Deck)",
@@ -25,8 +26,10 @@ misc = {
         ach_totp_abscission = "Defeat Verdant Leaf in Ante 8 without selling any jokers.",
         ach_totp_rich = "Have a Balance of at least $1000.",
         ach_totp_nostalgic = "Win a run without selecting any Small or Big Blinds.",
+        ach_totp_blackjack = "Win a run while only playing hands where the ranks of the cards add up to 21 or less. (Unscoring cards included)"
     },
     dictionary = {
+        totp_rank_up = "Rank Up!",
         totp_fool = "See? You are just a fool!",
         totp_comedy = "The comedy is finished!!",
         totp_banned = " was banned",
