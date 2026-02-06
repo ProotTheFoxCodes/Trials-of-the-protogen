@@ -140,9 +140,12 @@ misc = {
             ""
         },
         ch_c_totp_wine3 = {
-            "From Ante 3 onwards, a random {C:attention}Consumable{} that's not"
+            "{s:0.8,C:inactive}Every round:{}"
         },
         ch_c_totp_wine4 = {
+            "From Ante 3 onwards, a random {C:attention}Consumable{} that's not"
+        },
+        ch_c_totp_wine5 = {
             "in your possesion gets {C:red}banned for the rest of the run{}."
         },
         ch_c_totp_ss1 = {

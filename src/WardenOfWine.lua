@@ -6,6 +6,7 @@ SMODS.Challenge({
 			{ id = "totp_wine2" },
 			{ id = "totp_wine3" },
 			{ id = "totp_wine4" },
+            { id = "totp_wine5" },
         },
 --[[
 		modifiers = {
