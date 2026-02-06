@@ -113,7 +113,7 @@ misc = {
             "Start with an {C:attention}Eternal{} {X:legendary,C:attention}Yorick{}."
         },
         ch_c_totp_jest2 = {
-            "If {X:legendary,C:attention}Yorick{} is at {X:red,C:white}X20{} Mult by the {C:attention}Ante 8 Boss blind{}, {C:green}you win...{}"
+            "If {X:legendary,C:attention}Yorick{} has at least {X:red,C:white}X20{} Mult in the {C:attention}Ante 8 Boss Blind{}, {C:green}you win...{}"
         },
         ch_c_totp_jest3 = {
             "If you don't get the required scaling in time, {C:red}you lose{}."
