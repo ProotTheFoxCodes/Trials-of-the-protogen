@@ -4,6 +4,7 @@ function Game.start_run(args)
     G.GAME.totp_oml = true
     G.GAME.totp_blackjack = true
     G.GAME.totp_nostalgic = true
+    G.GAME.totp_discarded = {}
     return ret
 end
 
@@ -16,7 +17,6 @@ SMODS.current_mod.calculate = function(self, context)
             G.GAME.totp_nostalgic = false
         end
         G.GAME.totp_round_rerolls = 0
-        if not G.GAME.totp_discarded then G.GAME.totp_discarded = {} end
         G.GAME.totp_discarded["round"] = false
         if G.GAME.round_resets.ante >= 6 then
             G.GAME.totp_oml = false
@@ -81,8 +81,3 @@ function SMODS.current_mod.reset_game_globals(from_game_start)
     -- Win ante and other similar modifications moved to challenge apply functions 
 end
 
--- function from https://github.com/Sleitnick/RbxCookbook/commit/8af205194e966fe4f669be6698ef0f558541837c#diff-e6c4df4b6ea6fbb38c6f397c9258081b499f687843f825a73f0df167d9d82787
--- currently unused
-function Lerp(a,b,x)
-	return a + ((b - a) * x)
-end

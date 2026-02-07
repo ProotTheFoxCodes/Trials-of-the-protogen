@@ -1,12 +1,3 @@
 .lovelyignore
 .luarc.json
-.VSCodeCounter/.VSCodeCounterCountRealtime
-.VSCodeCounter/2026-02-03_18-47-15/details.md
-.VSCodeCounter/2026-02-03_18-47-15/diff-details.md
-.VSCodeCounter/2026-02-03_18-47-15/diff.csv
-.VSCodeCounter/2026-02-03_18-47-15/diff.md
-.VSCodeCounter/2026-02-03_18-47-15/diff.txt
-.VSCodeCounter/2026-02-03_18-47-15/results.csv
-.VSCodeCounter/2026-02-03_18-47-15/results.json
-.VSCodeCounter/2026-02-03_18-47-15/results.md
-.VSCodeCounter/2026-02-03_18-47-15/results.txt
+.VSCodeCounter/
