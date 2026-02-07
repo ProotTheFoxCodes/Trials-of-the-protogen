@@ -1,6 +1,6 @@
 start_old = Game.start_run
-function Game.start_run(args)
-    local ret = start_old(args)
+function Game.start_run(self,args)
+    local ret = start_old(self,args)
     G.GAME.totp_oml = true
     G.GAME.totp_blackjack = true
     G.GAME.totp_nostalgic = true
