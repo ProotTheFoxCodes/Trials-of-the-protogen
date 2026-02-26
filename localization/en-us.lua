@@ -175,22 +175,40 @@ misc = {
         ch_c_totp_nepo5 = {
             "Rerolls per shop limited to 5."
         },
+        ch_c_totp_chinashop1 = {
+            "Applies {C:attention}Plasma Deck{}, but with"
+        },
+        ch_c_totp_chinashop2 = {
+            "{C:red}X4{} base Blind Size. {s:0.65,C:inactive}instead of X2{}"
+        },
+        ch_c_totp_chinashop3 = {
+            ""
+        },
+        ch_c_totp_chinashop4 = {
+            "{s:0.45,C:inactive}what a weird looking dog{s:0.45,C:inactive,E:2}...{}{}"
+        },
         ch_c_totp_4oak1 = {
-            "{C:red}Warning: this is a sh**post{}"
+            "{C:inactive,s:0.8}Note from your Patron:{}"
         },
         ch_c_totp_4oak2 = {
-            "Play a {C:attention}Flawless Four Of A Kind{} to win."
+            "{C:inactive,s:0.65}Hey champion! It's me, Sayaka! this next one is kinda mean :( {}"
         },
         ch_c_totp_4oak3 = {
-            "{C:inactive}A Flawless Four Of A Kind is a Four Of A Kind made up of Aces{}"
+            "{C:inactive,s:0.65}but don't worry too much, the editor munerarius set this one up to amuse itself"
         },
         ch_c_totp_4oak4 = {
-            "{C:red}Beating the Ante 8 Boss Blind no longer counts.{}"
+            "Play a {C:attention}Flawless Four Of A Kind{} to win."
         },
         ch_c_totp_4oak5 = {
-            "{C:dark_edition}\"Winning in balatro is simple, all we have to do {}"
+            "{C:inactive}A Flawless Four Of A Kind is a Four Of A Kind made up of Aces{}"
         },
         ch_c_totp_4oak6 = {
+            "{C:red}Beating the Ante 8 Boss Blind no longer counts.{}"
+        },
+        ch_c_totp_4oak7 = {
+            "{C:dark_edition}\"Winning in balatro is simple, all we have to do {}"
+        },
+        ch_c_totp_4oak8 = {
             "{C:dark_edition}is play a Flawless Four Of A Kind and-\"{}"
         },
     }

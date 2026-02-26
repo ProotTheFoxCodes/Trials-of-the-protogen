@@ -7,7 +7,9 @@ SMODS.Challenge({
 			{ id = "totp_4oak3" },
 			{ id = "totp_4oak4" },
 			{ id = "totp_4oak5" },
-			{ id = "totp_4oak6" }
+			{ id = "totp_4oak6" },
+			{ id = "totp_4oak7" },
+			{ id = "totp_4oak8" },
 		},
 		modifiers = {
             { id = 'hands',  value = 2 },

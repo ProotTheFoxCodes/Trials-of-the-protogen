@@ -13,6 +13,7 @@ local order = {
     "WardenOfWine",
     "premonitions",
     "NotQuiteNepo",
+    "ChinaShop",
     "Flawless4oak",
 }
 for _, key in ipairs(order) do
