@@ -2,7 +2,8 @@ SMODS.Challenge({
 	key = "chinashop",
 	rules = {
 		custom = {
-
+            { id = "totp_chinashop5" },
+            { id = "totp_chinashop6" },
             { id = 'no_shop_jokers' },
 			{ id = "totp_chinashop1" },
             { id = "totp_chinashop2" },

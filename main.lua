@@ -1,5 +1,5 @@
 --[[
-Code "inspired" (taken and then modified to fit my needs)
+File loader code "inspired" (taken and then modified to fit my needs)
 from ortalab, which was made by eremel
 https://github.com/EremelMods/Ortalab/blob/5a10f033ec29ed72c78bed64e448c18ae1a5ca2f/main.lua
 ]]

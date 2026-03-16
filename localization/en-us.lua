@@ -46,6 +46,7 @@ misc = {
         c_totp_ss = "Dangerous Premonitions",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
+        c_totp_chinashop = "Bull in a China Shop"
         
     },
     v_text = {
@@ -137,7 +138,7 @@ misc = {
             "Start with an {C:attention}Eternal{} {X:legendary,C:green}Perkeo{}."
         },
         ch_c_totp_wine2 = {
-            ""
+            "{s:1.5} {}"
         },
         ch_c_totp_wine3 = {
             "{s:0.8,C:inactive}Every round:{}"
@@ -147,6 +148,15 @@ misc = {
         },
         ch_c_totp_wine5 = {
             "in your possesion gets {C:red}banned for the rest of the run{}."
+        },
+        ch_c_totp_wine6 = {
+            "{s:1.5} {}"
+        },
+        ch_c_totp_wine7 = {
+            "{C:dark_edition}Spectral Cards{} may appear in the shop,"
+        },
+        ch_c_totp_wine8 = {
+            "and are twice as likely compared to {C:attention}Ghost Deck{}"
         },
         ch_c_totp_ss1 = {
             "Start the run with an {C:attention}Eternal Sixth Sense{}."
@@ -174,6 +184,12 @@ misc = {
         },
         ch_c_totp_nepo5 = {
             "Rerolls per shop limited to 5."
+        },
+        ch_c_totp_chinashop5 = {
+            "{C:inactive,s:0.8}Note from your Patron:{}"
+        },
+        ch_c_totp_chinashop6 = {
+            "{C:inactive,s:0.65}Ah yes, bull fighting! Truly a classic...{}"
         },
         ch_c_totp_chinashop1 = {
             "Applies {C:attention}Plasma Deck{}, but with"
