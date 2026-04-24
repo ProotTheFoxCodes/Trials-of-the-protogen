@@ -68,14 +68,14 @@ SMODS.Challenge({
 local discard_old = G.FUNCS.discard_cards_from_highlighted
 function G.FUNCS.discard_cards_from_highlighted(e,hook)
 	if G.GAME.totp_from_canio or G.GAME.challenge ~= "c_totp_ahf2" or G.GAME.current_round.hands_left <= 0 then
-		discard_old()
+		discard_old(e,hook)
 		G.GAME.totp_from_canio = nil
 	else
 		if SMODS.pseudorandom_probability(nil, "canio discard", 1, 4) then
 			G.FUNCS.play_cards_from_highlighted(nil)
 			G.GAME.totp_from_canio = true
 		else
-			discard_old()
+			discard_old(e,hook)
 		end
 	end
 end
@@ -83,15 +83,15 @@ end
 local play_old = G.FUNCS.play_cards_from_highlighted
 function G.FUNCS.play_cards_from_highlighted(e)
 	if G.GAME.totp_from_canio or G.GAME.challenge ~= "c_totp_ahf2" or G.GAME.current_round.discards_left <= 0 then
-		play_old()
+		play_old(e)
 		G.GAME.totp_from_canio = nil
 	else
 		if SMODS.pseudorandom_probability(nil, "canio play", 1, 4) then
 ---@diagnostic disable-next-line: redundant-parameter
-			G.FUNCS.discard_cards_from_highlighted(nil,nil)
+			G.FUNCS.discard_cards_from_highlighted(e)
 			G.GAME.totp_from_canio = true
 		else
-			play_old()
+			play_old(e)
 		end
 	end
 end
