@@ -81,3 +81,13 @@ function SMODS.current_mod.reset_game_globals(from_game_start)
     -- Win ante and other similar modifications moved to challenge apply functions 
 end
 
+old_money = ease_dollars
+function ease_dollars(mod)
+    if mod > 0 and (G.GAME.challenge == "c_totp_nepo" or (G.GAME.challenge == "c_totp_demise" and G.GAME.round_resets.blind_choices.Boss == "bl_tooth")) then
+        mod = 0
+    else
+        old_money(mod)
+    end
+    return (ret or 0)
+end
+

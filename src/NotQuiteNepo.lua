@@ -46,16 +46,6 @@ SMODS.Challenge({
 	end
 })
 
-old_money = ease_dollars
-function ease_dollars(mod)
-    if mod > 0 and G.GAME.challenge == "c_totp_nepo" then
-        mod = 0
-    else
-        old_money(mod)
-    end
-    return (ret or 0)
-end
-
 old_shop_reroll = G.FUNCS.reroll_shop
 function G.FUNCS.reroll_shop(e)
 	G.GAME.totp_round_rerolls = (G.GAME.totp_round_rerolls or 0) + 1
