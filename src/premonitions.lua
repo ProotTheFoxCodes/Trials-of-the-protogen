@@ -1,11 +1,11 @@
 SMODS.Challenge({
-	key = "ss",
+	key = "6s",
 	rules = {
 		custom = {
-			{ id = "totp_ss1" },
-			{ id = "totp_ss2" },
-			{ id = "totp_ss3" },
-			{ id = "totp_ss4" },
+			{ id = "totp_6s1" },
+			{ id = "totp_6s2" },
+			{ id = "totp_6s3" },
+			{ id = "totp_6s4" },
 			
         },
 		modifiers = {
@@ -23,7 +23,6 @@ SMODS.Challenge({
     },
 	restrictions = {
 		banned_cards = {
-	        { id = "c_strength" },
 			{ id = "c_strength" },	
 			{ id = "c_tower" },	
 			{ id = "c_familiar" },
@@ -111,13 +110,8 @@ SMODS.Challenge({
 		}
 	},
     apply = function(self)
-        G.GAME.starting_params.play_limit = 1
+        SMODS.change_play_limit(-4)
 		SMODS.update_hand_limit_text(true)
----@diagnostic disable-next-line: redundant-return-value
-        return true
-    end,
-	calculate = function(self, context)
-        local ret = {}
-	end
+    end
 })
 

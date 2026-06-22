@@ -5,10 +5,47 @@ function Game.start_run(self,args)
     G.GAME.totp_blackjack = true
     G.GAME.totp_nostalgic = true
     G.GAME.totp_discarded = {}
+    G.GAME.totp_handsize = 0
     return ret
 end
 
+function totp.demisePassiveCheck()
+    local _type = G.GAME.blind:get_type()
+    return _type == "Small" or _type == "Big"
+end
+
+boss_old = get_new_boss
+function get_new_boss()
+    return (G.GAME.totp_debug_boss and "bl_"..G.GAME.totp_debug_boss) or boss_old
+end
+
+function totp.setBacks(args)
+    local rarityBacks = {
+        { x = 0, y = 2 },
+        { x = 2, y = 2 },
+        { x = 0, y = 0 },
+        { x = 4, y = 2 },
+    }
+    local atlasPos = {}
+    for _,card in ipairs(G.jokers.cards) do
+        if card.children.back then card.children.back:remove() end
+        if args.rarity then
+            atlasPos = rarityBacks[card.config.center.rarity] or args.pos or { x = 0, y = 4 }
+        elseif args.pos then
+            atlasPos = args.pos
+        end
+        card.children.back = Sprite(card.T.x, card.T.y, card.T.w, card.T.h,
+            G.ASSET_ATLAS[self.set == "Back"], atlasPos)
+        card.children.back.states.hover = card.states.hover
+        card.children.back.states.click = card.states.click
+        card.children.back.states.drag = card.states.drag
+        card.children.back.states.collide.can = false
+        card.children.back:set_role({ major = card, role_type = 'Glued', draw_major = card })
+    end
+end
+
 SMODS.current_mod.calculate = function(self, context)
+
     if context.setting_blind then
         if G.GAME.blind.config.blind.key == "bl_final_leaf" then
             G.GAME.totp_leafsell = false

@@ -82,10 +82,14 @@ SMODS.Challenge({
 update_old = Game.update
 
 function Game:update(args)
-
+    
     local ret = update_old(self,args)
 
-    if UI_update_allowed then
+    if G.STATE == G.STATES.GAME_OVER and UI_update_allowed then
+        UI_update_allowed = false
+    end
+    
+    if UI_update_allowed and not G.SETTINGS.paused then
         local win_UI = G.HUD:get_UIE_by_ID("ante_UI_win").config
         win_UI.ref_table.fake_win = 1
 
@@ -100,10 +104,6 @@ function Game:update(args)
 
         local kround = G.HUD:get_UIE_by_ID('round_UI_count').config.object.config.string[1]
         kround.ref_table.fake_round = G.GAME.round * -1
-    end
-
-    if G.STATE == G.STATES.GAME_OVER and UI_update_allowed then
-        UI_update_allowed = false
     end
 
     return ret

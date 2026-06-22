@@ -1,0 +1,25 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+# Make blind_choices into a metatable so I can check if the blind is changed
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "self.GAME = saveTable and saveTable.GAME or self:init_game_object()"
+position = 'after'
+match_indent = true
+payload = '''
+
+local oldblindchoices = self.GAME.round_resets.blind_choices
+self.GAME.round_resets.blind_choices = setmetatable({}, {
+    __index = oldblindchoices,
+    __newindex = function(t, k, v)
+        if k == 'Boss' then
+            SMODS.calculate_context({totp_boss_change = true})
+        end
+        rawset(oldblindchoices, k, v)
+    end
+})
+
+'''

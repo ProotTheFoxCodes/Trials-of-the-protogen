@@ -1,0 +1,14 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+position = "after"
+pattern = "G.hand.config.card_limit <= 0 and #G.hand.cards == 0 then "
+payload = '''
+    check_for_unlock({type = "artist"})
+'''
+match_indent = true
+times = 1

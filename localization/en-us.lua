@@ -43,7 +43,7 @@ misc = {
         c_totp_jest = "A Fellow of Infinite Jest",
         c_totp_chicot = "Chicot if he locked in",
         c_totp_wine_warden = "Warden of Wine",
-        c_totp_ss = "Dangerous Premonitions",
+        c_totp_6s = "Dangerous Premonitions",
         c_totp_nepo = "Nepotism?",
         c_totp_flawless4oak = "Flawless Four Of A Kind",
         c_totp_chinashop = "Bull in a China Shop"
@@ -72,7 +72,7 @@ misc = {
             " "
         },
         ch_c_totp_ahf28 = {
-            "Destroy one random {X:inactive,C:white}non{} {X:inactive,C:white}face{} {X:inactive,C:white}card{} from deck"
+            "Destroy one random {X:inactive,C:white}non{} {X:inactive,C:white}face{} {X:inactive,C:white}card{} from full deck"
         }, 
         ch_c_totp_ahf29 = {
             "when a face card is destroyed."
@@ -87,10 +87,10 @@ misc = {
             "All cards start as 7s."
         },
         ch_c_totp_talents3 = {
-            "Whenever a {C:blue}non King or Queen{} triggers, {C:red}reduce{}"
+            "Whenever a {C:blue}non King or Queen{} triggers,"
         },
         ch_c_totp_talents4 = {
-            "{C:red}either{} {C:chips}chips{}{C:red} or{} {X:red,C:white}mult{} {C:red}by 30%.{}"
+            "{C:red}either{} {X:chips}X0.7{} {C:chips}chips{}{C:red} or{} {X:red,C:white}X0.7{} {C:red}mult{}."
         },
         ch_c_totp_talents5 = {
             " "
@@ -158,16 +158,16 @@ misc = {
         ch_c_totp_wine8 = {
             "and are twice as likely compared to {C:attention}Ghost Deck{}"
         },
-        ch_c_totp_ss1 = {
+        ch_c_totp_6s1 = {
             "Start the run with an {C:attention}Eternal Sixth Sense{}."
         },
-        ch_c_totp_ss2 = {
+        ch_c_totp_6s2 = {
             "Start with a deck of 6s."
         },
-        ch_c_totp_ss3 = {
+        ch_c_totp_6s3 = {
             "{C:attention}Hand selection limit{} is set to {C:red}1{}."
         },
-        ch_c_totp_ss4 = {
+        ch_c_totp_6s4 = {
             "{s:0.8,C:inactive}[You can only play 1 card, but you can still discard as usual.]{}"
         },
         ch_c_totp_nepo1 = {
