@@ -111,7 +111,6 @@ SMODS.Challenge({
 	},
     apply = function(self)
         SMODS.change_play_limit(-4)
-		SMODS.update_hand_limit_text(true)
     end
 })
 

@@ -1,0 +1,12 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = "G.CONTROLLER.locks.toggle_shop = nil"
+position = 'after'
+match_indent = true
+payload = '''
+SMODS.calculate_context({totp_selecting_blind = true})
+'''

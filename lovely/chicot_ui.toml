@@ -1,11 +1,6 @@
 [manifest]
 version = "1.0.0"
 priority = 0
-# Inject one or more lines of code before, after, or at (replacing) a line which matches
-# the provided pattern.
-#
-# USEFUL: For when you need to add / modify a small amount of code to setup initialization
-# routines, etc.
 [[patches]]
 [patches.pattern]
 target = "functions/UI_definitions.lua"

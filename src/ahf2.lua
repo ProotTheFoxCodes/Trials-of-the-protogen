@@ -50,7 +50,7 @@ SMODS.Challenge({
 		if context.remove_playing_cards then --and context.remove_playing_cards.scoring_hand then
 			for i=1, #context.removed do
 				if context.removed[i]:is_face() then
-					local comedy_card = pseudorandom_element(G.deck.cards, "non faces", {
+					local comedy_card = pseudorandom_element(G.playing_cards, "non faces", {
 					in_pool = function(v)
 						return not v:is_face() and not v.totp_tragic
 					end

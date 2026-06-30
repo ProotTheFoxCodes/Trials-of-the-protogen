@@ -17,6 +17,7 @@ local order = {
     "NotQuiteNepo",
     "ChinaShop",
     "Flawless4oak",
+    "demise",
 }
 for _, key in ipairs(order) do
     assert(SMODS.load_file('src/'..key..'.lua'))()

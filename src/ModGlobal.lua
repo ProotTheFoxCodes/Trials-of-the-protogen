@@ -1,4 +1,6 @@
+
 start_old = Game.start_run
+
 function Game.start_run(self,args)
     local ret = start_old(self,args)
     G.GAME.totp_oml = true
@@ -9,14 +11,25 @@ function Game.start_run(self,args)
     return ret
 end
 
+round_old = end_round
+
+function end_round()
+    if G.GAME.totp_wall then
+        G.GAME.totp_wall = nil
+        return
+    end
+    round_old()
+end
+
+select_old = G.FUNCS.select_blind
+
+function G.FUNCS.select_blind(e)
+    if not G.GAME.totp_leafstate then select_old(e) end
+end
+
 function totp.demisePassiveCheck()
     local _type = G.GAME.blind:get_type()
     return _type == "Small" or _type == "Big"
-end
-
-boss_old = get_new_boss
-function get_new_boss()
-    return (G.GAME.totp_debug_boss and "bl_"..G.GAME.totp_debug_boss) or boss_old
 end
 
 function totp.setBacks(args)
@@ -34,8 +47,7 @@ function totp.setBacks(args)
         elseif args.pos then
             atlasPos = args.pos
         end
-        card.children.back = Sprite(card.T.x, card.T.y, card.T.w, card.T.h,
-            G.ASSET_ATLAS[self.set == "Back"], atlasPos)
+        card.children.back = SMODS.create_sprite(card.T.x, card.T.y, card.T.w, card.T.h, "centers", atlasPos)
         card.children.back.states.hover = card.states.hover
         card.children.back.states.click = card.states.click
         card.children.back.states.drag = card.states.drag
@@ -45,6 +57,11 @@ function totp.setBacks(args)
 end
 
 SMODS.current_mod.calculate = function(self, context)
+
+    if G.GAME.totp_leafstate then
+        SMODS.calculate_effect{{message = localize("k_nope_ex")},G.deck.cards[1] or G.deck}
+        G.GAME.totp_leafstate = nil
+    end
 
     if context.setting_blind then
         if G.GAME.blind.config.blind.key == "bl_final_leaf" then

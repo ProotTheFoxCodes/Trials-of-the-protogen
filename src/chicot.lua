@@ -83,7 +83,7 @@ update_old = Game.update
 
 function Game:update(args)
     
-    local ret = update_old(self,args)
+    update_old(self,args)
 
     if G.STATE == G.STATES.GAME_OVER and UI_update_allowed then
         UI_update_allowed = false
@@ -105,7 +105,5 @@ function Game:update(args)
         local kround = G.HUD:get_UIE_by_ID('round_UI_count').config.object.config.string[1]
         kround.ref_table.fake_round = G.GAME.round * -1
     end
-
-    return ret
 
 end

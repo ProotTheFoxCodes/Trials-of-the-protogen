@@ -1,0 +1,81 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = '''
+            G.blind_select:remove()
+            G.blind_prompt_box:remove()
+            G.blind_select = nil
+            delay(0.2)
+            return true
+        end}))
+'''
+position = 'after'
+match_indent = false
+payload = '''
+if G.GAME.totp_sold or (not G.GAME.challenge == "c_totp_demise") or (not G.GAME.round_resets.blind_choices.Boss == "bl_final_leaf") then
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = '''
+        G.E_MANAGER:add_event(Event({
+          trigger = 'immediate',
+          func = function()
+            new_round()
+            return true
+          end
+        }))
+'''
+position = 'after'
+match_indent = true
+payload = '''
+else
+    card_eval_status_text((G.deck.cards[1] or G.deck),"extra",0,nil,nil,{message = localize("k_nope_ex"),sound = "chips1",volume = 0.7,colour = G.C.PURPLE})
+    G.E_MANAGER:add_event(Event({
+      trigger = 'after',
+      delay = 1.5,
+      timer = "REAL",
+      func = function()
+        ease_round(-1)
+        return true
+      end
+    }))
+    G.STATE_COMPLETE = false
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = '''
+  G.FUNCS.skip_blind = function(e)
+'''
+position = 'after'
+match_indent = false
+payload = '''
+if G.GAME.totp_sold or (not G.GAME.challenge == "c_totp_demise") or (not G.GAME.round_resets.blind_choices.Boss == "bl_final_leaf") then
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = '''
+            if G.GAME.tags[i]:apply_to_run({type = 'new_blind_choice'}) then break end
+          end
+          return true
+        end
+      }))
+    end
+'''
+position = 'after'
+match_indent = true
+payload = '''
+else
+    card_eval_status_text((G.deck.cards[1] or G.deck),"extra",0,nil,nil,{message = localize("k_nope_ex"),sound = "chips1",volume = 0.7,colour = G.C.PURPLE})
+end
+'''
