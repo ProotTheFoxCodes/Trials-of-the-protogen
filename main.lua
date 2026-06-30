@@ -11,7 +11,6 @@ local order = {
     "ahf2",
     "FoolOfManyTalents",
     "jest",
-    "chicot",
     "WardenOfWine",
     "premonitions",
     "NotQuiteNepo",
