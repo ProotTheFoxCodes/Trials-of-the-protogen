@@ -505,6 +505,7 @@ SMODS.Challenge({
             for _, card in ipairs(G.jokers.cards) do
                 if card.facing == "back" then card:flip() end
             end
+            save_run()
         end
 
         -- Verdant Leaf
@@ -518,21 +519,34 @@ SMODS.Challenge({
 
 
         -- Violet Vessel
-        if context.end_of_round and context.beat_boss and G.GAME.round_resets.blind_choices.Boss == "bl_final_vessel" then
+        if context.end_of_round and context.beat_boss and G.GAME.round_resets.blind_choices.Boss == "bl_final_vessel" and not G.GAME.totp_v1 then
             G.GAME.win_ante = G.GAME.win_ante + 2
             G.GAME.totp_vessel = true
+            G.GAME.totp_v1 = true
+            G.GAME.totp_wall = G.GAME.totp_wall or {}
+            for i = 11, 39 do
+                G.GAME.totp_wall["Ante"..i] = true
+            end
         end
 
-        if context.totp_selecting_blind and G.GAME.totp_vessel and G.GAME.round_resets.ante > G.GAME.win_ante - 3 and G.GAME.round_resets.ante <= G.GAME.win_ante then
+        if context.totp_selecting_blind and G.GAME.totp_vessel then
             blindSound()
             G.GAME.totp_wall = G.GAME.totp_wall or {}
             if not G.GAME.totp_wall["Ante"..G.GAME.round_resets.ante] then
-                for _,bl in ipairs{"Small","Big","Boss"} do
-                    G.GAME.round_resets.blind_choices[bl] = "bl_wall"   
-                    G.blind_select:remove()
-                    G.blind_prompt_box:remove()
-                end
-                G.STATE_COMPLETE = false
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 1,
+                    blockable = true, blocking = false,
+                    func = function()
+                        for _,bl in ipairs{"Small","Big","Boss"} do
+                        G.GAME.round_resets.blind_choices[bl] = "bl_wall"   
+                        G.blind_select:remove()
+                        G.blind_prompt_box:remove()
+                        G.STATE_COMPLETE = false
+                    end
+                    return true
+                    end
+                }))
                 G.GAME.totp_wall["Ante"..G.GAME.round_resets.ante] = true
             end
         end
