@@ -145,3 +145,36 @@ function ease_dollars(mod)
     return (ret or 0)
 end
 
+function G.UIDEF.view_banned(args)
+    local deck_tables = {}
+    local bans = {}
+    for k,v in pairs(G.GAME.banned_keys) do
+        if v then bans[#bans+1] = k end
+    end
+    table.sort(bans)
+    local view_deck = CardArea(
+    G.ROOM.T.x + 0.2*G.ROOM.T.w/2,G.ROOM.T.h,
+    6.5*G.CARD_W,
+    0.6*G.CARD_H,
+    {card_limit = #bans, type = 'title', view_deck = true, highlight_limit = 0, card_w = G.CARD_W*0.7, draw_layers = {'card'}})
+    table.insert(deck_tables, 
+    {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+    {n=G.UIT.O, config={object = view_deck}}
+    }}
+    )
+
+    for _,v in ipairs(bans) do
+        local copy = SMODS.create_card(G.P_CENTERS[v])
+        copy:set_ability(v)
+        copy.T.x = view_deck.T.x + view_deck.T.w/2
+        copy.T.y = view_deck.T.y
+        copy:hard_set_T()
+        view_deck:emplace(copy)
+    end
+    return {
+        n = G.UIT.ROOT, 
+        config = {align = "cm", padding = 0.1, colour = G.C.CLEAR}, 
+        nodes = deck_tables
+    }
+end
+
