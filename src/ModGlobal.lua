@@ -1,3 +1,4 @@
+totp.config = SMODS.current_mod.config
 
 start_old = Game.start_run
 

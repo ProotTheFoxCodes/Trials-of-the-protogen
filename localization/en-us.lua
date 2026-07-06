@@ -36,6 +36,13 @@ misc = {
         totp_your = "your",
         totp_you_re = "you're",
         totp_youre = "youre",
+        totp_bantab = "Banned Items",
+        totp_settings_maintheme = "Menu Music",
+        totp_settings_song = {
+            " Futuristic Gay Game ",
+            "Futuristic Gay Game 2"
+        },
+        totp_settings_continuesong = "Keep playing menu music during runs"
     },
     challenge_names = {
         c_totp_talents = "Fool of Many Talents",
